@@ -8,7 +8,6 @@ import MaaserPage from './pages/MaaserPage';
 import OverviewPage from './pages/OverviewPage';
 import AddIncomePage from './pages/AddIncomePage';
 import AddMaaserPage from './pages/AddMaaserPage';
-
 import Layout from './components/Layout';
 import ManageSourcesPage from './pages/ManageSourcesPage';
 

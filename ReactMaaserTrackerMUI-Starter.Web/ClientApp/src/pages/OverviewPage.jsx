@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Container, Typography, Box, Paper } from '@mui/material';
 import axios from 'axios';
+import { formatCurrency, formatDate } from '../Format';
 
 const OverviewPage = () => {
 
@@ -39,18 +40,18 @@ const OverviewPage = () => {
         </Typography>
         <Box sx={{ marginBottom: '20px' }}>
           <Typography variant="h5" gutterBottom>
-            Total Income: ${totalIncome}
+            Total Income: {formatCurrency(totalIncome)};
           </Typography>
           <Typography variant="h5" gutterBottom>
-            Total Maaser: ${maaserGiven}
+            Total Maaser: {formatCurrency(maaserGiven)};
           </Typography>
         </Box>
         <Box>
           <Typography variant="h5" gutterBottom>
-            Maaser Obligated: ${totalMaaserObligation}
+            Maaser Obligated: {formatCurrency(totalMaaserObligation)};
           </Typography>
           <Typography variant="h5" gutterBottom>
-            Remaining Maaser Obligation: ${remainingObligation > 0 ? remainingObligation : 0}
+            Remaining Maaser Obligation: {formatCurrency(remainingObligation > 0 ? remainingObligation : 0)};
           </Typography>
         </Box>
       </Paper>

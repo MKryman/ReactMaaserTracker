@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from '@mui/material';
 import axios from 'axios';
 import dayjs from 'dayjs';
+import { formatCurrency, formatDate } from '../Format';
 
 const MaaserPage = () => {
 
@@ -35,8 +36,8 @@ const MaaserPage = () => {
                 <TableCell component="th" scope="row" sx={{ fontSize: '18px' }}>
                   {payment.recipient}
                 </TableCell>
-                <TableCell align="right" sx={{ fontSize: '18px' }}>${payment.amount}</TableCell>
-                <TableCell align="right" sx={{ fontSize: '18px' }}>{dayjs(payment.dateGiven).format('MM/DD/YYYY')}</TableCell>
+                <TableCell align="right" sx={{ fontSize: '18px' }}>${formatCurrency(payment.amount)}</TableCell>
+                <TableCell align="right" sx={{ fontSize: '18px' }}>{formatDate(payment.dateGiven)}</TableCell>
               </TableRow>
             ))}
           </TableBody>

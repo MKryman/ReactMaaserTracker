@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Checkbox, Container, FormControlLabel, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from '@mui/material';
 import axios from 'axios';
 import dayjs from 'dayjs';
+import { formatDate } from '../Format';
 
 
 const IncomePage = () => {
@@ -83,8 +84,8 @@ const IncomePage = () => {
                       <TableCell component="th" scope="row" sx={{ fontSize: '18px' }}>
                         {name}
                       </TableCell>
-                      <TableCell align="right" sx={{ fontSize: '18px' }}>${income.amount}</TableCell>
-                      <TableCell align="right" sx={{ fontSize: '18px' }}>{dayjs(income.dateEarned).format('MM/DD/YYYY')}</TableCell>
+                      <TableCell align="right" sx={{ fontSize: '18px' }}>${formatCurrency(income.amount)}</TableCell>
+                      <TableCell align="right" sx={{ fontSize: '18px' }}>{formatDate(income.dateEarned)}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
