@@ -28,7 +28,6 @@ const AddMaaserPage =() => {
                 type="date"
                 value={dayjs(selectedDate).format('YYYY-MM-DD')}
                 onChange={e => setSelectedDate(e.target.value)}
-                renderInput={(params) => <TextField {...params} fullWidth margin="normal" variant="outlined" />}
             />
             <Button variant="contained" sx={{marginTop: 2}} onClick={doAMitzvahAndGiveMaaser} color="primary">Add Maaser</Button>
         </Container>

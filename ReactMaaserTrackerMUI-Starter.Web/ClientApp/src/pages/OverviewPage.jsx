@@ -40,18 +40,18 @@ const OverviewPage = () => {
         </Typography>
         <Box sx={{ marginBottom: '20px' }}>
           <Typography variant="h5" gutterBottom>
-            Total Income: {formatCurrency(totalIncome)};
+            Total Income: {formatCurrency(totalIncome)}
           </Typography>
           <Typography variant="h5" gutterBottom>
-            Total Maaser: {formatCurrency(maaserGiven)};
+            Total Maaser: {formatCurrency(maaserGiven)}
           </Typography>
         </Box>
         <Box>
           <Typography variant="h5" gutterBottom>
-            Maaser Obligated: {formatCurrency(totalMaaserObligation)};
+            Maaser Obligated: {formatCurrency(totalMaaserObligation)}
           </Typography>
           <Typography variant="h5" gutterBottom>
-            Remaining Maaser Obligation: {formatCurrency(remainingObligation > 0 ? remainingObligation : 0)};
+            Remaining Maaser Obligation: {formatCurrency(remainingObligation > 0 ? remainingObligation : 0)}
           </Typography>
         </Box>
       </Paper>

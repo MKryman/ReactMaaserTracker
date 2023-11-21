@@ -21,7 +21,7 @@ namespace ReactMaaserTrackerMUI.Data
         public List<Income> GetIncome()
         {
             var context = new MaaserDataContext(_connectionString);
-            return context.AllIncome.Include(i => i.Source).ToList();
+            return context.AllIncome.Include(i => i.Source).OrderByDescending(i => i.DateEarned).ToList();
         }
 
         public void AddIncome(Income income)
@@ -75,7 +75,7 @@ namespace ReactMaaserTrackerMUI.Data
         public List<Maaser> GetAllTransactions()
         {
             var context = new MaaserDataContext(_connectionString);
-            return context.Maaser.ToList();
+            return context.Maaser.OrderByDescending(m => m.DateGiven).ToList();
         }
         
         public void GiveMaaser(Maaser m)
@@ -84,16 +84,6 @@ namespace ReactMaaserTrackerMUI.Data
             context.Add(m);
             context.SaveChanges();
         }
-
-
-        //public OverviewViewModel DoMaaserMath()
-        //{
-        //    var totalIncome = ComputeTotalIncomes();
-        //    var maaserObligated = totalIncome / 10;
-        //    var totalMaaserGiven = ComputeTotalMaaser();
-        //    var remainingMaaserOwed = maaserObligated - totalMaaserGiven;
-        //}
-
 
         public decimal ComputeTotalIncomes()
         {
