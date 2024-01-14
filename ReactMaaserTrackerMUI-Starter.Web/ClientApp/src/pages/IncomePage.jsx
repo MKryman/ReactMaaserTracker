@@ -84,7 +84,7 @@ const IncomePage = () => {
                       <TableCell component="th" scope="row" sx={{ fontSize: '18px' }}>
                         {name}
                       </TableCell>
-                      <TableCell align="right" sx={{ fontSize: '18px' }}>${formatCurrency(income.amount)}</TableCell>
+                      <TableCell align="right" sx={{ fontSize: '18px' }}>{formatCurrency(income.amount)}</TableCell>
                       <TableCell align="right" sx={{ fontSize: '18px' }}>{formatDate(income.dateEarned)}</TableCell>
                     </TableRow>
                   ))}

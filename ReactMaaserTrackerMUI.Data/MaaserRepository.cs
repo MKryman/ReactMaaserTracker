@@ -59,7 +59,7 @@ namespace ReactMaaserTrackerMUI.Data
 
         public void EditSource(Source source)
         {
-            var context = new MaaserDataContext(_connectionString);
+        var context = new MaaserDataContext(_connectionString);
             context.Sources.Update(source);
             context.SaveChanges();
         }

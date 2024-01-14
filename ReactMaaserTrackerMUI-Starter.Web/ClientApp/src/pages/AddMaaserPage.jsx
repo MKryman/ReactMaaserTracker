@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const AddMaaserPage =() => {
 
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState('');
     const [recipient, setRecipient] = useState('');
     const [selectedDate, setSelectedDate] = useState(new Date());
     const nav = useNavigate();

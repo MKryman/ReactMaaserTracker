@@ -36,7 +36,7 @@ const MaaserPage = () => {
                 <TableCell component="th" scope="row" sx={{ fontSize: '18px' }}>
                   {payment.recipient}
                 </TableCell>
-                <TableCell align="right" sx={{ fontSize: '18px' }}>${formatCurrency(payment.amount)}</TableCell>
+                <TableCell align="right" sx={{ fontSize: '18px' }}>{formatCurrency(payment.amount)}</TableCell>
                 <TableCell align="right" sx={{ fontSize: '18px' }}>{formatDate(payment.dateGiven)}</TableCell>
               </TableRow>
             ))}

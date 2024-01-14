@@ -9,7 +9,7 @@ const AddIncomePage = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [sources, setSources] = useState([]);
     const [selectedSource, setSelectedSource] = useState(null);
-    const [amountEarned, setAmountEarned] = useState(0);
+    const [amountEarned, setAmountEarned] = useState('');
     const navigate = useNavigate();
 
 
