@@ -51,7 +51,7 @@ const OverviewPage = () => {
                         Maaser Obligated: {formatCurrency(totalMaaserObligation)}
                     </Typography>
                 </Box>
-                <Box sx={{ color: "#B52E2E", fontWeight: "fontWeightMedium"}}>
+                <Box sx={{ color: "#B52E2E"}}>
                     <Typography variant="h5" gutterBottom>
                         <strong>Remaining Maaser Obligation: {formatCurrency(remainingObligation > 0 ? remainingObligation : 0)}</strong>
                     </Typography>
